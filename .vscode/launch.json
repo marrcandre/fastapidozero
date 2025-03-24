@@ -5,11 +5,11 @@
       "name": "Run with PDM",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/manage.py",
-      "args": ["runserver", "0.0.0.0:19003"],
+      "program": "${workspaceFolder}/fast_zero/app.py",
+      // "args": ["runserver", "0.0.0.0:19003"],
       "console": "integratedTerminal",
       "env": {
-        "PYTHONPATH": "${workspaceFolder}/__pypackages__/3.12/lib"
+        "PYTHONPATH": "${workspaceFolder}/__pypackages__/3.13/lib"
       }
     }
   ]

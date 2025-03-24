@@ -34,7 +34,7 @@ distribution = false
 lint = "ruff check"
 pre_format = "ruff check --fix"
 format = "ruff format"
-dev = "fastapi dev fast_zero/app.py"
+dev = "fastapi dev fast_zero/app.py --host 0.0.0.0 --port 19003"
 pre_test = "pdm run lint"
 test = "pdm run pytest -s -x --cov=fast_zero"
 post_test = "pdm run coverage html"
