@@ -31,11 +31,11 @@ addopts = '-p no:warnings'
 distribution = false
 
 [tool.pdm.scripts]
-lint = "ruff check"
+check = "ruff check"
 pre_format = "ruff check --fix"
 format = "ruff format"
 dev2 = "fastapi dev fast_zero/app.py --host 0.0.0.0 --port 19003"
 dev = "fastapi dev fast_zero/app.py"
-pre_test = "pdm run lint"
+pre_test = "pdm run check"
 test = "pdm run pytest -s -x --cov=fast_zero"
 post_test = "pdm run coverage html"
