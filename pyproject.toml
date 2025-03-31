@@ -3,7 +3,7 @@ name = "todo"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [{ name = "Marco André Mendes", email = "marcoandre@gmail.com" }]
-dependencies = ["fastapi[standard]>=0.115.11"]
+dependencies = ["fastapi[standard]>=0.115.11", "sqlalchemy>=2.0.40"]
 requires-python = ">=3.13,<4.0"
 readme = "README.md"
 license = { text = "MIT" }
@@ -37,5 +37,5 @@ format = "ruff format"
 dev2 = "fastapi dev fast_zero/app.py --host 0.0.0.0 --port 19003"
 dev = "fastapi dev fast_zero/app.py"
 pre_test = "pdm run check"
-test = "pdm run pytest -s -x --cov=fast_zero"
-post_test = "pdm run coverage html"
+test = "pytest -s -x --cov=fast_zero tests/"
+post_test = "coverage html"
