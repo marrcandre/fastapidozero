@@ -3,7 +3,7 @@ name = "todo"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [{ name = "Marco André Mendes", email = "marcoandre@gmail.com" }]
-dependencies = ["fastapi[standard]>=0.115.11", "sqlalchemy>=2.0.40", "alembic>=1.15.2"]
+dependencies = ["fastapi[standard]>=0.115.11", "sqlalchemy>=2.0.40", "alembic>=1.15.2", "pydantic-settings>=2.8.1"]
 requires-python = ">=3.13,<4.0"
 readme = "README.md"
 license = { text = "MIT" }
