@@ -3,13 +3,17 @@ name = "todo"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [{ name = "Marco André Mendes", email = "marcoandre@gmail.com" }]
-dependencies = ["fastapi[standard]>=0.115.11", "sqlalchemy>=2.0.40"]
+dependencies = ["fastapi[standard]>=0.115.11", "sqlalchemy>=2.0.40", "alembic>=1.15.2"]
 requires-python = ">=3.13,<4.0"
 readme = "README.md"
 license = { text = "MIT" }
 
 [dependency-groups]
 dev = ["pytest>=8.3.5", "pytest-cov>=6.0.0", "ruff>=0.11.2"]
+
+[[tool.pdm.autoexport]]
+filename = "requirements.txt"
+without-hashes = "true"
 
 [tool.ruff]
 line-length = 79
